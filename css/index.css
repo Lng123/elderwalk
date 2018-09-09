@@ -1,19 +1,109 @@
 ul > li {
-	padding-top: 10px;
 	font-family: 'Marcellus SC', serif;
+}
+
+img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.navbar {
+	background-color: DarkOliveGreen;
+
 }
 
 .navbar-brand {
 	float: left;
-	margin-top: 10px;
 	font-family: 'Marcellus SC', serif;
+	color: white !important;
+}
+
+.navbar-brand:hover{
+	color: Chartreuse !important;
+}
+
+.navbar-nav li a {
+	color: white !important;
+}
+
+.navbar-nav li a:hover {
+	color: Chartreuse !important;
 }
 
 .navbar-toggle {
-	margin-top: 17px;
+}
+
+.nav {
+}
+
+.carousel-caption {
+	font-family: 'Marcellus SC', serif;
 }
 
 #content {
-	margin-top: 70px;
-	background-color: AliceBlue;
+	margin-top: 50px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+    .carousel-caption {
+    display: none; 
+  }
+}
+
+.container-fluid {
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+
+#About {
+	font-family: 'Marcellus SC', serif;
+}
+
+#About1 {
+	background-color: DarkSeaGreen;
+}
+
+#About2 {
+	background-color: SeaGreen;
+}
+
+#About h3 {
+	color: HoneyDew;
+}
+
+#About b {
+	color: white;
+}
+
+#About h4 {
+	color: white;
+}
+
+#About img {
+	display: block;
+	margin: 0 auto;
+}
+
+#People {
+	color: white;
+	font-family: 'Marcellus SC', serif;
+}
+
+#Ellaine {
+	background-color: MediumAquaMarine;
+}
+
+#People img {
+	display: block;
+	margin: 0 auto;
+	max-width: 70%;
+}
+
+#Ellaine h4 {
+	padding-top: 50px;
+}
+
+#Solution {
+	background-color: MediumAquaMarine;
 }
