@@ -14,9 +14,14 @@ ul > li {
 }
 
 #content {
+    max-width: 600px;
 	margin-top: 70px;
 	background-color: AliceBlue;
 }
 
+canvas {
+    max-width: 600px;
+    max-height: 300px;
+}
 
 
