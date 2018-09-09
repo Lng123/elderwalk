@@ -17,3 +17,23 @@ ul > li {
 	margin-top: 70px;
 	background-color: AliceBlue;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+canvas {
+    width: 100%;
+    border: solid;
+}
+
+.btn-primary{
+    background-color: #333;
+}
