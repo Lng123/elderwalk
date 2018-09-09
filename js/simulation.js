@@ -5,28 +5,42 @@ function init() {
  
   senior.src = "images/senior.png";
   youngPerson.src = "images/youngPerson.png"
-  window.requestAnimationFrame(draw);
+  window.requestAnimationFrame(animate);
+
 }
 
 
 //Test
 
-function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.globalCompositeOperation = 'destination-over';
-  ctx.clearRect(0, 0, 300, 300); // clear canvas
-
-
-
-  //old person
-  ctx.drawImage(senior, 100, 50, 32, 32);
-  ctx.drawImage(youngPerson, 175, 50, 32, 32);
-
-  window.requestAnimationFrame(draw);
-
-}
 
 init();
+
+
+
+
+var a = 20;
+var b = 20;
+var x = 20;
+var y = 20;
+var z = 20;
+function animate() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+    window.requestAnimationFrame(animate);
+    
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    ctx.drawImage(youngPerson, a, 90, 32, 32);
+    ctx.drawImage(youngPerson, b, 20, 32, 32);
+    ctx.drawImage(senior, x, 70, 32, 32);
+    ctx.drawImage(senior, y, 40, 32, 32);
+    ctx.drawImage(senior, z, 10, 32, 32);
+    x += 0.10;
+    y += 0.050;
+    z += 0.080;
+    a += 0.31;
+    b += 0.26;
+    
+}
+
 
 
 
