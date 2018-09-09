@@ -1,0 +1,61 @@
+Names: ElderWalk
+Colors: Green and Yellow
+
+1 tap machine at the crosswalk start to allow for senior to notify when sensors should go off (use a compass card or a senior card) 
+
+Process: 
+-- Tap in at beginning of street, walk through crosswalk -- no need to tap out
+-- sensors will know when they get to center
+-- if none have gotten to center by certain countdown, the default countdown will have already been running -- stop hand will appear at certain time
+-- if all got to center before certain countdown, then countDownElder will start running and sign will change based on countDownElder -- (basically adding another 30 seconds to the countdown)
+-- if some seniors got to center but not all, countDownElder activates after defaultcountdown reaches 0.
+
+Note: CertainCountDown based on average speed of elderly pedestrians crossing the longest street
+
+Logic:
+// VARIABLES:
+bool default (changes to false when senior taps, changes to true when cDTD is 0 and sensorMid is false - default is val is true)int countDownToDefault (defaultCountdown : clock for default boolean -- default value is 0, activates when elderWalkTap is true)
+int defaultCD (always exists)
+
+list listOfElders (listOfChips that have been tapped in before the walk sign)
+bool elderWalkTap (changes to true when at least one elder has tapped)
+bool sensorMid (changes to true when sensor tracks the chip/all chips have passed)
+int countDownElder (countDown for Elders)
+ 
+// PRECONDITION: 
+
+
+If (listL.size() >= 1 || listR.size() >= 1) {
+	activateAllSensors();
+	countdownToDefault();
+}
+
+
+
+Pitch: 
+ElderWalk
+
+
+-- Question/Intro: 2 Questions for you all! 
+How long do you think it takes for an older person to walk across the street?
+
+Counting on all the factors, it really depends on the situation! Some streets are longer than others, and some streets are shorter! Some elders walk faster than others, and some walk slower!
+
+How many old people know how to use phones or even have phones?
+
+Not a lot! Most elderly in the current age don't like technology or don't have the experience with it. Not only that, but elderly are likely to drop these expensive pieces of technology or forget them somewhere. Even students forget their phones in places sometimes, and misplace them! 
+
+But! The elderly walking around are most likely carrying their senior cards or their compass cards with them, because they take the bus and they do need identification!
+
+This is why we came up with ElderWalk!
+
+ElderWalk will allow for elders to tap their cards with chips imbedded in them at their end of the crosswalk to activate the sensors in the middle of the cross walks. The sensors will continuously scan for the chip and once they've reached the center of the crosswalk, a special countdown will begin, allowing them ample time to cross the street.
+
+-- Story: Meet Ellaine! 
+Ellaine came back from her knitting class walking home. Being a bit older and not as mobile, she walks slower than the average adult. Vancouver's roads and streets don't accommodate for slower walking elderly so there are times where she'll have some close calls with vehicle traffic.
+
+-- Ellaine discovered the ElderWalk program, which allows for sensor technology to accommodate elders in a feasible and scalable way, extending the their walking time to cross the streets while optimizing the use of the technology to different situations, neither continuously slowing down vehicle traffic when it is unneeded, nor restricting pedestrians from crossing in certain areas.
+
+-- With Elderwalk, she's able to cross the street without worry that she will not make it to the other side on time, or that she will have to wait in the center of the street while the light is green and cars are rushing past! She will not have to worry about having close calls with incoming traffic.
+
+Demo
