@@ -27,7 +27,9 @@ var first2 = false;
 var first3 = false;
 var center1 = false;
 var center2 = false;
+var center3 = false;
 var last = false;
+var sensorMid = false;
 
 function animate() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -44,33 +46,50 @@ function animate() {
     z += 0.080;
     a += 0.31;
     b += 0.26;
+
     
-    if (x > 25 && first1 == false) {
-        console.log("initiated walk, senior detected");
+    if (x > 20 && first1 == false) {
+        console.log("senior card detected");
         first1 = true;
     }
 
-    if (y > 25 && first2 == false) {
-        console.log("initiated walk, senior detected");
+    if (y > 20 && first2 == false) {
+        console.log("senior card detected");
         first2 = true;
     }
 
-    if (z > 25 && first3 == false) {
-        console.log("initiated walk, senior detected");
+    if (z > 20 && first3 == false) {
+        console.log("senior card detected");
         first3 = true;
     }
-
     
-    if (x > 100 && y > 100 && z > 100 && center2 == false) {
-        console.log("all seniors passed");
+    if (x > 140 && center1 == false) {
+        console.log("senior passed center");
+        center1 = true;
+    }
+    
+    if (y > 140 && center2 == false) {
+        console.log("senior passed center");
         center2 = true;
     }
     
+    if (z > 140 && center3 == false) {
+        console.log("senior passed center");
+        center3 = true;
+    }
+    
+    
+    if (x > 350 && y > 350 && z > 350 && sensorMid == false) {
+        console.log("all seniors have passed center");
+        sensorMid = true;
+    }
+    
+    /*
     if ((x > 200 || y > 200 || z > 200) && last == false) {
         console.log("street crossed");
         last = true;
     }
-    
+    */
     
     
     
