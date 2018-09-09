@@ -40,6 +40,12 @@ img {
 	font-family: 'Marcellus SC', serif;
 }
 
+canvas {
+    margin: auto;
+    width: 700px;
+    height: 300px;
+}
+
 #content {
 	margin-top: 50px;
 }
@@ -107,3 +113,12 @@ img {
 #Solution {
 	background-color: MediumAquaMarine;
 }
+
+#Content {
+  margin: auto;
+  width: 700px;
+	margin-top: 70px;
+	background-color: #7a8391;
+}
+}
+

@@ -11,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Marcellus+SC" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+  <script src="js/simulation.js"></script>
 
   <title>ElderWalk</title>
 </head>
@@ -48,7 +51,6 @@
 	</div>
 	  
 	<div id="content">
-
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		    <!-- Indicators -->
 		    <ol class="carousel-indicators">
@@ -137,10 +139,6 @@
 
 		</div>
 		
-				
-
-
-		
 
 
 		<div id="Demo" class="container-fluid text-center"> 
@@ -149,7 +147,13 @@
 		</div>
 
 
+			<canvas id = "canvas"></canvas>
 	</div>
+
+    <div id="countdown"></div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary" onclick ="startSimulation()">Start simulation</button>
+    </div>
 	
 
 </body>
