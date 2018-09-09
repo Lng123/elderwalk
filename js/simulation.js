@@ -9,7 +9,7 @@ function init() {
 }
 
 
-
+//Test
 
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
